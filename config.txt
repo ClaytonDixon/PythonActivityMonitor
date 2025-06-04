@@ -1,0 +1,137 @@
+# ====================================================================
+# PRODUCTIVITY MONITOR CONFIGURATION
+# ====================================================================
+# Simple configuration file for productivity monitoring.
+# Edit the values after the = sign to customize your settings.
+# Restart the script after making changes.
+# ====================================================================
+
+# ====================================================================
+# EMAIL CONFIGURATION
+# ====================================================================
+
+# Your email address where productivity reports will be sent
+to_email=your.email@company.com
+
+# ====================================================================
+# EMAIL TIMING MODE
+# ====================================================================
+# Choose when to send productivity reports:
+#
+# interval     = Send emails every X minutes (good for active monitoring)
+# time_of_day  = Send ONE email per day at specific time (good for daily summaries)
+
+email_timing_mode=time_of_day
+
+# ====================================================================
+# INTERVAL MODE SETTINGS
+# ====================================================================
+# Only used when email_timing_mode=interval
+#
+# How often to send emails (in seconds)
+# 
+# Examples:
+# 180  = 3 minutes
+# 300  = 5 minutes  
+# 900  = 15 minutes
+# 1800 = 30 minutes
+# 3600 = 1 hour
+
+email_interval=180
+
+# ====================================================================
+# TIME-OF-DAY MODE SETTINGS  
+# ====================================================================
+# Only used when email_timing_mode=time_of_day
+# 
+# When to send the daily productivity report (24-hour format HH:MM)
+#
+# Examples:
+# 09:00 = 9:00 AM
+# 12:00 = 12:00 PM (noon)
+# 17:00 = 5:00 PM
+# 18:00 = 6:00 PM
+# 20:30 = 8:30 PM
+
+daily_email_time=18:00
+
+# ====================================================================
+# FRIDAY-ONLY MODE
+# ====================================================================
+# Controls whether the script only runs on Fridays
+#
+# false = Run every day (default behavior)
+# true  = Only run on Fridays (useful for weekly summaries)
+#
+# When enabled, the script will immediately exit if it's not Friday.
+# Perfect for weekly productivity reports instead of daily ones.
+
+friday_only=false
+
+
+# ====================================================================
+# COMMON CONFIGURATION EXAMPLES
+# ====================================================================
+
+# OPTION 1: Daily email at 6 PM (recommended for most users)
+# email_timing_mode=time_of_day
+# daily_email_time=18:00
+# friday_only=false
+
+# OPTION 2: Weekly email on Friday at 5 PM (for weekly summaries)
+# email_timing_mode=time_of_day
+# daily_email_time=17:00
+# friday_only=true
+
+# OPTION 3: Email every 15 minutes (active monitoring)
+# email_timing_mode=interval
+# email_interval=900
+# friday_only=false
+
+# OPTION 4: Friday-only emails every 30 minutes
+# email_timing_mode=interval
+# email_interval=1800
+# friday_only=true
+
+# ====================================================================
+# HOW TO CHANGE SETTINGS
+# ====================================================================
+
+# TO SWITCH TO DAILY MODE (one email per day):
+# 1. Set: email_timing_mode=time_of_day
+# 2. Set: daily_email_time=18:00 (or your preferred time)
+# 3. Set: friday_only=false
+# 4. Save file and restart script
+
+# TO SWITCH TO WEEKLY MODE (Friday-only):
+# 1. Set: friday_only=true
+# 2. Set: email_timing_mode=time_of_day
+# 3. Set: daily_email_time=17:00 (or your preferred time)
+# 4. Save file and restart script
+
+# TO SWITCH TO INTERVAL MODE (regular emails):
+# 1. Set: email_timing_mode=interval  
+# 2. Set: email_interval=900 (or your preferred interval in seconds)
+# 3. Set: friday_only=false (or true for Friday-only)
+# 4. Save file and restart script
+
+# TO CHANGE EMAIL ADDRESS:
+# 1. Set: to_email=your.new.email@company.com
+# 2. Save file and restart script
+
+# ====================================================================
+# QUICK SETUP
+# ====================================================================
+# 1. Change "your.email@company.com" to your actual email address
+# 2. Choose your schedule:
+#    - For daily reports: friday_only=false
+#    - For weekly reports: friday_only=true
+# 3. Choose your timing mode:
+#    - For daily summary: email_timing_mode=time_of_day
+#    - For regular updates: email_timing_mode=interval
+# 4. Save this file
+# 5. Restart the productivity monitor
+# 6. You should receive your first report!
+
+
+# END OF CONFIGURATION
